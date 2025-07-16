@@ -1,0 +1,113 @@
+i{
+    cursor: pointer;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Times New Roman', Times, serif;
+}
+.notes-card{
+    transition: 0.8s;
+}
+
+.note-item{
+    width: 100% !important;
+}
+.notes-item .card:hover{
+    /* border: 1px solid rgb(155, 155, 155) !important; */
+    box-shadow: 0 0 3px gray;
+}
+header .nav-link{
+    color: rgb(190, 190, 190) !important;
+}
+header .active{
+    color: rgb(255, 255, 255) !important;
+}
+
+.notes-item .note-select-box{
+    display: none;
+    transition:0.5s;
+}
+.notes-item .note-select-box-active{
+    display: block;
+}
+.notes-item:hover .note-select-box{
+    display: block;
+}
+
+.searchbar{
+    width: 10%;
+    transition:0.8s;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: -10;
+}
+.searchbar-active{
+    width:100%;
+    opacity: 1;
+    z-index: 10;
+}
+
+
+.dropdown-modal{
+    width: 0;
+    height: 0;
+    transform: unset !important;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.dropdown-container{
+    top: 25%;
+    left: 50% !important;
+    transform: translate(-50%,-25%) !important;
+    position: fixed !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.897);
+    height: 100%;
+    width:100%;
+    background: rgba(37, 37, 41, 0.664);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(1px);
+    border-radius: 0%;
+    border:none;
+    transition:0.5s;
+    display:flex;
+}
+ 
+
+.dropdown-modal .dropdown-inner{
+    width: 95%;
+    height:350px;
+    max-width: 35rem;
+    padding: 20px;
+    box-shadow: 0 0 5px #242431;
+    border-radius: 5px;
+    background:#212529;
+    border: 1px solid #666666;
+}
+
+.dropdown-modal .dropdown-inner li hr {
+    opacity: .095 !important;
+    margin: 0.5rem !important;
+}
+.selection-action{
+    opacity: 0;
+    margin-left: -100px;
+    transition: 0.5s;
+    z-index:-10;
+}
+.selection-action-active{
+    opacity: 1 !important;
+    margin-left:0px !important;
+    z-index:unset;
+}
+
+@media (max-width:990px){
+    .change-layout{
+        display: none;
+    }
+    .note-select-box{
+        display: block !important;
+    }
+}
